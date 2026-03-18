@@ -75,9 +75,9 @@ layers:
   - Ctl+V
   - Ctl+A
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - LEFT ARROW
+  - DOWN ARROW
+  - RIGHT ARROW
   - {t: ▽, type: trans}
   - ''
   - ''
