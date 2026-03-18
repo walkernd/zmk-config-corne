@@ -1,6 +1,48 @@
 layout: {zmk_keyboard: corne}
 layers:
-  Alpha: ['', Q, W, F, P, G, J, L, U, Y, ;, '', '', A, R, S, T, D, H, N, E, I, O, '', '', Z, X, C, V, B, K, M, ',', ., /, '', '', Numbers, ␣, ⏎, Functions, '']
+  Alpha:
+  - ''
+  - Q
+  - W
+  - F
+  - P
+  - G
+  - J
+  - L
+  - U
+  - Y
+  - ;
+  - ''
+  - ''
+  - {t: A, h: LEFT GUI}
+  - R
+  - S
+  - T
+  - D
+  - H
+  - N
+  - E
+  - I
+  - O
+  - ''
+  - ''
+  - Z
+  - X
+  - C
+  - V
+  - B
+  - K
+  - M
+  - ','
+  - .
+  - /
+  - ''
+  - ''
+  - {t: Numbers, h: sticky}
+  - {t: LEFT SHIFT, h: sticky}
+  - BACK
+  - ␣
+  - ''
   Numbers:
   - ''
   - '1'
@@ -27,11 +69,11 @@ layers:
   - {t: ▽, type: trans}
   - ''
   - ''
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - Ctl+Z
+  - Ctl+X
+  - Ctl+C
+  - Ctl+V
+  - Ctl+A
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -41,8 +83,8 @@ layers:
   - ''
   - {type: held}
   - ␣
-  - ⏎
-  - {t: ▽, type: trans}
+  - DELETE
+  - ENTER
   - ''
   Functions:
   - ''
@@ -85,5 +127,5 @@ layers:
   - '&studio_unlock'
   - ␣
   - ⏎
-  - {t: '&studio_unlock', type: held}
+  - '&studio_unlock'
   - ''
