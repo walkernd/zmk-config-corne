@@ -130,8 +130,6 @@ layers:
   - '&studio_unlock'
   - ''
 combos:
-- p: [5, 4]
-  k: DELETE
 - p: [4, 3]
   k: ↹
 - p: [2, 1]
@@ -142,3 +140,9 @@ combos:
   k: LEFT CONTROL
 - p: [25, 26, 39]
   k: '&Control_Del'
+- p: [16, 15]
+  k: ENTER
+- p: [5, 4]
+  k: ⌦
+- p: [17, 16]
+  k: BACKSPACE

@@ -16,11 +16,6 @@
         compatible = "zmk,combos";
 
         Tab {
-            bindings = <&kp DELETE>;
-            key-positions = <5 4>;
-        };
-
-        Tab {
             bindings = <&kp TAB>;
             key-positions = <4 3>;
         };
@@ -44,6 +39,21 @@
             bindings = <&Control_Del>;
             key-positions = <25 26 39>;
         };
+
+        Enter {
+            bindings = <&kp ENTER>;
+            key-positions = <16 15>;
+        };
+
+        Del {
+            bindings = <&kp DEL>;
+            key-positions = <5 4>;
+        };
+
+        Backspace {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <17 16>;
+        };
     };
 
     macros {
@@ -56,6 +66,13 @@
                 <&macro_release>;
 
             label = "CONTROL_DEL";
+        };
+
+        Email: Email {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp W &kp A &kp L &kp K &kp E &kp R &kp N &kp D &kp N7 &kp N6 &kp AT &kp H &kp O &kp T &kp M &kp A &kp I &kp L &kp DOT &kp C &kp O &kp M>;
+            label = "EMAIL";
         };
     };
 
