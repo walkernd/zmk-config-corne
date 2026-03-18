@@ -35,7 +35,7 @@ layers:
   - M
   - ','
   - .
-  - /
+  - {t: /, h: \}
   - ''
   - ''
   - {t: Numbers, h: sticky}
@@ -129,3 +129,14 @@ layers:
   - ⏎
   - '&studio_unlock'
   - ''
+combos:
+- p: [5, 4]
+  k: DELETE
+- p: [4, 3]
+  k: ↹
+- p: [2, 1]
+  k: ESCAPE
+- p: [37, 38]
+  k: {t: Numbers, h: sticky}
+- p: [13, 14]
+  k: LEFT CONTROL

@@ -12,6 +12,35 @@
 &led_strip { chain-length = <27>; };
 
 / {
+    combos {
+        compatible = "zmk,combos";
+
+        Tab {
+            bindings = <&kp DELETE>;
+            key-positions = <5 4>;
+        };
+
+        Tab {
+            bindings = <&kp TAB>;
+            key-positions = <4 3>;
+        };
+
+        Esc {
+            bindings = <&kp ESCAPE>;
+            key-positions = <2 1>;
+        };
+
+        Functions {
+            bindings = <&sl 1>;
+            key-positions = <37 38>;
+        };
+
+        Control {
+            bindings = <&kp LEFT_CONTROL>;
+            key-positions = <13 14>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -25,9 +54,9 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&none  &kp Q           &kp W  &kp F  &kp P  &kp G             &kp J       &kp L      &kp U      &kp Y    &kp SEMICOLON  &none
-&none  &mt LEFT_GUI A  &kp R  &kp S  &kp T  &kp D             &kp H       &kp N      &kp E      &kp I    &kp O          &none
-&none  &kp Z           &kp X  &kp C  &kp V  &kp B             &kp K       &kp M      &kp COMMA  &kp DOT  &kp FSLH       &none
+&none  &kp Q           &kp W  &kp F  &kp P  &kp G             &kp J       &kp L      &kp U      &kp Y    &kp SEMICOLON        &none
+&none  &mt LEFT_GUI A  &kp R  &kp S  &kp T  &kp D             &kp H       &kp N      &kp E      &kp I    &kp O                &none
+&none  &kp Z           &kp X  &kp C  &kp V  &kp B             &kp K       &kp M      &kp COMMA  &kp DOT  &mt BACKSLASH SLASH  &none
                               &none  &sl 1  &sk LEFT_SHIFT    &kp K_BACK  &kp SPACE  &none
             >;
         };
