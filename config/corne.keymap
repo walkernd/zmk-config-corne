@@ -39,6 +39,24 @@
             bindings = <&kp LEFT_CONTROL>;
             key-positions = <13 14>;
         };
+
+        Contol_Del {
+            bindings = <&Control_Del>;
+            key-positions = <25 26 39>;
+        };
+    };
+
+    macros {
+        Control_Del: Control_Del {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_CONTROL &kp DELETE>,
+                <&macro_release>;
+
+            label = "CONTROL_DEL";
+        };
     };
 
     keymap {
@@ -71,10 +89,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&none  &kp N1        &kp N2     &kp N3     &kp N4     &kp N5       &kp N6      &kp N7          &kp N8          &kp N9           &kp N0  &none
-&none  &kp NUMBER_6  &kp N7     &kp N8     &kp N9     &kp N0       &kp LEFT    &kp DOWN        &kp UP          &kp RIGHT        &trans  &none
-&none  &kp LC(Z)     &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LC(A)    &trans      &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans  &none
-                                &none      &trans     &kp SPACE    &kp DELETE  &kp ENTER       &none
+&none  &kp N1        &kp N2     &kp N3     &kp N4     &kp N5            &kp TILDE        &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &none
+&none  &kp NUMBER_6  &kp N7     &kp N8     &kp N9     &kp N0            &kp EXCLAMATION  &kp EQUAL             &kp UP                 &kp RIGHT         &key_repeat        &none
+&none  &kp LC(Z)     &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LC(A)         &kp AT           &kp LEFT_ARROW        &kp DOWN_ARROW         &kp RIGHT_ARROW   &mt PIPE MINUS     &none
+                                &none      &trans     &sk LEFT_SHIFT    &kp DELETE       &kp ENTER             &none
             >;
         };
 
@@ -88,10 +106,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&none  &kp EXCL  &kp AT  &kp HASH  &kp DLLR        &kp PRCNT    &kp CARET  &kp AMPS        &kp KP_MULTIPLY  &kp LPAR  &kp RPAR  &none
-&none  &trans    &trans  &trans    &trans          &trans       &kp MINUS  &kp EQUAL       &kp LBKT         &kp RBKT  &kp BSLH  &none
-&none  &trans    &trans  &trans    &trans          &trans       &kp UNDER  &kp PLUS        &kp LBRC         &kp RBRC  &kp PIPE  &none
-                         &none     &studio_unlock  &kp SPACE    &kp RET    &studio_unlock  &none
+&none  &kp F1   &kp F2  &kp F3  &kp F4          &kp F5       &kp CARET  &kp AMPS        &kp KP_MULTIPLY  &kp LPAR  &kp RPAR  &none
+&none  &kp F6   &kp F7  &kp F8  &kp F9          &kp F10      &kp MINUS  &kp EQUAL       &kp LBKT         &kp RBKT  &kp BSLH  &none
+&none  &kp F11  &trans  &trans  &trans          &trans       &kp UNDER  &kp PLUS        &kp LBRC         &kp RBRC  &kp PIPE  &none
+                        &none   &studio_unlock  &kp SPACE    &kp RET    &studio_unlock  &none
             >;
         };
     };
